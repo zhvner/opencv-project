@@ -9,10 +9,6 @@ Install opencv-contrib-python and caer packages using:
 pip3 install opencv-contrib-python
 pip3 install caer
 
-to run files, type in the terminal, respectively for your needed file: 
-python3 draw.py 
-python3 read.py 
-python3 rescale.py 
 
 - [Projects](#projects)
 - [Resources](#resources)
@@ -25,3 +21,12 @@ To get started with OpenCV and this repository, follow these steps:
 1. Clone this repository:
    ```bash
    git clone https://github.com/yourusername/your-repo.git
+
+2. Install opencv-contrib-python and caer packages using:
+   ```bash
+      pip3 install opencv-contrib-python
+      pip3 install caer
+
+3. run files, type in the terminal:
+   ```bash
+   python3 ...py
