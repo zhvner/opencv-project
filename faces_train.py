@@ -37,8 +37,6 @@ def create_train():
             img_path = os.path.join(path,img)
 
             img_array = cv.imread(img_path)
-        
-                
             gray = cv.cvtColor(img_array, cv.COLOR_BGR2GRAY)
 
             faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4)
@@ -49,4 +47,23 @@ def create_train():
                 labels.append(label)
 
 create_train()
+
+
+# print(f'Length of features = {len(features)}')
+# print(f'Length of labels = {len(labels)}')
+#Length of features = 100
+# Length of labels = 100
+
 print('Training done ---------------')
+# train the recognizer on the features and the labels list
+features = np.array(features, dtype='object')
+labels = np.array(labels)
+
+face_recognizer = cv.face.LBPHFaceRecognizer_create()
+
+# train the recognizer on the features and the labels list
+face_recognizer.train(features, labels)
+
+face_recognizer.save('face_trained.yml')
+np.save('features.npy', features)
+np.save('labels.npy', labels)
