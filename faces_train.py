@@ -21,7 +21,7 @@ import os
 
 # method 1
 
-people = ['Ben Afflek', 'Elton John', 'Jerry Seignfield', 'Madonna', 'Mindy Kaling']
+people = ['Ben Afflek', 'Elton John', 'Jerry Seinfield', 'Madonna', 'Mindy Kaling']
 DIR = (r'Faces/train')
 haar_cascade = cv.CascadeClassifier('haar_face.xml') # - reads
 
@@ -37,8 +37,7 @@ def create_train():
             img_path = os.path.join(path,img)
 
             img_array = cv.imread(img_path)
-            if img_array is None:
-                continue 
+        
                 
             gray = cv.cvtColor(img_array, cv.COLOR_BGR2GRAY)
 
