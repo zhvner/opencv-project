@@ -3,7 +3,7 @@ import cv2 as cv
 import math
 
 # Create a VideoCapture object for the default camera = webcam (camera index 0)
-capture = cv.VideoCapture('../Images/Videos/dog.mp4')
+capture = cv.VideoCapture('../Images/Videos/kitten.mp4')
 
 # getting frame height/width from webcam object
 frame_width = int(capture.get(3))
