@@ -12,7 +12,6 @@ pip3 install caer
 
 - [Projects](#projects)
 - [Resources](#resources)
-- [Contributing](#contributing)
 
 ## Getting Started
 

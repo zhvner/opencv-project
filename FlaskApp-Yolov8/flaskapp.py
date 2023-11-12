@@ -4,11 +4,10 @@ from YOLO_video import video_detection
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'zhvner'
-
 def generate_frames(path_x=''):
     yolo_output = video_detection(path_x)
-    for detection_ in yolo_output:
-        ref, buffer = cv.imencode('.jpg', detection_)
+    for detected in yolo_output:
+        ref, buffer = cv.imencode('.jpg', detected)
 
         frame = buffer.tobytes()
         yield (b'--frame\r\n'
