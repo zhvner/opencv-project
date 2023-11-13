@@ -54,7 +54,6 @@ def generate_frames_web(path_x):
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 @app.route('/', methods=['GET', 'POST'])
-
 @app.route('/home', methods=['GET', 'POST'])
 def home():
     session.clear()
