@@ -64,13 +64,13 @@ def home():
 # def video():
 #     session.clear()
 #     return render_template('video.html')
-#
+
 # @app.route('/webcam',methods=['GET', 'POST'])
 # def webcam():
 #     session.clear()
 #     return render_template('ui.html')
 
-@app.route('/front',methods=['GET', 'POST'])
+@app.route('/FrontPage',methods=['GET', 'POST'])
 def front():
     # instance  to handle file uploads.
     form = UploadFileForm()
@@ -92,7 +92,9 @@ def front():
 
 @app.route('/video')
 def video():
-    return Response(generate_frames(path_x='../Videos_web/bikes.mp4'), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(generate_frames(path_x=session.get('video_path', None)),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
 
 @app.route('/webcam')
 def webcam():
