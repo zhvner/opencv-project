@@ -32,7 +32,8 @@ To get started with OpenCV and this repository, follow these steps:
 
 4. to run flask files, type in the terminal:
    ```bash
-   python3 flaskapp.py
+   cd FlaskApp-Yolov8-Web
+   python3 flaskapp1.py
    
 5. to see video detection: 
    ```bash
