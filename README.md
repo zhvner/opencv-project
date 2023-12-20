@@ -10,9 +10,6 @@ pip3 install opencv-contrib-python
 pip3 install caer
 
 
-- [Projects](#projects)
-- [Resources](#resources)
-
 ## Getting Started
 
 To get started with OpenCV and this repository, follow these steps:
@@ -42,3 +39,5 @@ To get started with OpenCV and this repository, follow these steps:
 6. to see webcam detection: 
    ```bash
    http://127.0.0.1:8080/webcam
+   
+
